@@ -1,4 +1,4 @@
-package org.geunskoo;
+package org.geunskoo.rentcompany;
 
 import java.util.ArrayList;
 import java.util.List;

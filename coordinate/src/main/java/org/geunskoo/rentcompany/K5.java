@@ -1,12 +1,12 @@
-package org.geunskoo;
+package org.geunskoo.rentcompany;
 
-public class Sonata extends Car {
+public class K5 extends Car {
 
-    private final String SONATA = "Sonata";
-    private final Double DISTANCE_PER_LITER = 10.0;
+    private final String K5 = "K5";
+    private final Double DISTANCE_PER_LITER = 13.0;
     private final double distance;
 
-    public Sonata(double distance) {
+    public K5(double distance) {
         this.distance = distance;
     }
 
@@ -23,6 +23,6 @@ public class Sonata extends Car {
 
     @Override
     public String getName() {
-        return SONATA;
+        return K5;
     }
 }

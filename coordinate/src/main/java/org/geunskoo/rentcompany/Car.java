@@ -1,4 +1,4 @@
-package org.geunskoo;
+package org.geunskoo.rentcompany;
 
 public abstract class Car {
 
