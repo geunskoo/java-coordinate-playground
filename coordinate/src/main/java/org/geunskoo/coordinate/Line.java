@@ -13,7 +13,7 @@ public class Line {
     }
 
     public double calculateEuclideanDistance(){
-        return Math.sqrt(Math.pow(startPoint.getX() - endPoint.getX(), 2) + Math.pow(startPoint.getY() - endPoint.getY(), 2));
+        return Math.sqrt(Math.pow(startPoint.xGap(endPoint), 2) + Math.pow(startPoint.yGap(endPoint), 2));
     }
 
     public double getLength() {

@@ -26,4 +26,17 @@ class PointTest {
 
         assertThat(line.getLength()).isEqualTo(6.403, offset(0.00099));
     }
+
+    @Test
+    @DisplayName("점의 좌표는 0~24 사이 정수만 입력 가능하다.")
+    void validation(){
+
+        assertThatThrownBy(
+                () -> {new Point(0, 25);}
+        ).isInstanceOf(IllegalArgumentException.class);
+
+        assertThatThrownBy(
+                () -> {new Point(-1, 24);}
+        ).isInstanceOf(IllegalArgumentException.class);
+    }
 }
