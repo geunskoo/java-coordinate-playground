@@ -22,7 +22,7 @@ class PointTest {
     @DisplayName("두 점과 연산을 입력하면 계산기는 거리를 구해준다.")
     void calculate(){
         Calculator calculator = new Calculator();
-        Line line = calculator.calcDistance("(10,10)-(14,15)");
+        Line line = calculator.drawLine("(10,10)-(14,15)");
 
         assertThat(line.getLength()).isEqualTo(6.403, offset(0.00099));
     }

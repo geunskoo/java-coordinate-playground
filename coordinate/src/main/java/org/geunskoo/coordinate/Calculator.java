@@ -7,13 +7,17 @@ public class Calculator {
 
     }
 
-    public Line calcDistance(String cmd) {
-        cmd = cmd.replace("(", "").replace(")","");
-        String[] points = cmd.split("-");
+    public Line drawLine(String cmd) {
+        String[] points = commandParser(cmd);
 
-        Point point1 = new Point( Integer.parseInt(points[0].split(",")[0]), Integer.parseInt(points[0].split(",")[1]));
-        Point point2 = new Point( Integer.parseInt(points[1].split(",")[0]), Integer.parseInt(points[1].split(",")[1]));
+        Point point1 = new Point(points[0]);
+        Point point2 = new Point(points[1]);
 
         return drawLine(point1, point2);
+    }
+
+    private static String[] commandParser(String cmd) {
+        cmd = cmd.replace("(", "").replace(")","");
+        return cmd.split("-");
     }
 }
